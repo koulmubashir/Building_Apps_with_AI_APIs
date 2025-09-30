@@ -27,7 +27,7 @@ with sync_playwright() as p:
     page = browser.new_page()
     try:
         # Open Gmail sign-in
-        page.goto("https://accounts.google.com/signin/v2/identifier?service=mail", timeout=30000)
+        page.goto("https://mail.google.com/", timeout=30000)
         
         # Fill email (identifier)
         page.wait_for_selector('input[type="email"]', timeout=15000)
